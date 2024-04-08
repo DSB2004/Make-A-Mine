@@ -1,0 +1,19 @@
+.credCard {
+    box-shadow: var(--shadow-1);
+    height: 100px;
+    width: 150px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.credCard h2 {
+    margin: 2px;
+    font-size: 1em;
+}
+
+.credCard h5 {
+    margin: 2px;
+    font-size: 0.5em;
+    font-weight: 500;
+}

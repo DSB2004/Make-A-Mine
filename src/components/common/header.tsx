@@ -1,6 +1,13 @@
-import React, { FC } from 'react'
-import Button from '../../layouts/button/button'
+import React, { FC, useEffect, useRef, useState } from 'react'
+import { useEvent } from '../../provider/handleEvent'
 
+//import layouts UI
+import Button from '../../layouts/button/button'
+import MenuToggle from '../../layouts/menu-btn/menu-btn'
+
+// styling import 
+import style from "../../style/modules/header.module.css"
+import { useHeader } from '../../provider/handleHeaderEvent'
 
 // type checking 
 type headerObjType = {
@@ -17,21 +24,21 @@ interface ListProp {
 }
 interface IPROPS {
     content: {
-        button: headerObjType[],
-        list: headerObjType[]
+        list: headerObjType[], link?: string | undefined
     }
 }
 
 
-//JSX Component
+//TSX Component
 
 const NavList: FC<ListProp> = ({ content }): JSX.Element => {
     const { action, text, id } = content;
     return (
         <>
-            <li>
+            <li className={style.list}>
                 {text}
-            </li>
+                <div className={style.underline}></div>
+            </li >
         </>
     )
 }
@@ -40,7 +47,7 @@ const DropList: FC<ListProp> = ({ content }): JSX.Element => {
     const { action, text, id } = content;
     return (
         <>
-            <li>
+            <li className={style.droplist}>
                 {text}
             </li>
         </>
@@ -48,26 +55,32 @@ const DropList: FC<ListProp> = ({ content }): JSX.Element => {
 }
 
 
+
+
 const Header: FC<IPROPS> = ({ content }): JSX.Element => {
-    const { list, button } = content;
+    const { list, link } = content;
+    const { handleExternalLink } = useEvent();
+    const { isScroll, isOpen, handleMenuClick, handleListClick, menuBtnRef } = useHeader()
     return (
-        <header>
-            <h1>MakeAMine</h1>
-            <nav>
+        <header className={`flex-even ${style.header} ${isScroll ? style.afterScroll : ""}`}>
+            <h1 className={style.heading}>MakeAMine</h1>
+            <nav className={`flex-center ${style.navbar}`}>
                 {list && list.map((element, index) => (
                     <NavList content={element} key={index} />
                 ))}
-                {button && button.map((element, index) => (
-                    <Button content={element} key={index} />
-                ))}
+                <Button content={{ text: "Free Strategy Call", id: "call-btn", onClick: (): void => { handleExternalLink(link) } }} darkEffect={isScroll} key="free-call-btn-1" />
             </nav>
-            <nav>
-                <h2>MakeAMine</h2>
+            <span className={style.menubtn}>
+                <MenuToggle btnRef={menuBtnRef} isScroll={isScroll} onClick={() => { handleMenuClick() }} />
+            </span>
+
+            <nav className={`flex-left flex-column ${style.dropmenu} ${isOpen ? style.openMenu : ""}`}>
+                <h2 className={style.dropheading}>MakeAMine</h2>
                 {list && list.map((element, index) => (
                     <DropList content={element} key={index} />
                 ))}
             </nav>
-        </header>
+        </header >
     )
 }
 

@@ -1,0 +1,174 @@
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* hero section */
+.hero {
+    position: relative;
+    background: var(--background);
+    background-size: 200% 100%;
+    animation: wave 5s linear infinite;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(../../assets/image/BACKGROUND.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.heroWaveBg {
+    position: absolute;
+    bottom: -100px;
+    height: 400px;
+    width: 100%;
+    z-index: 0;
+
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    height: 750px;
+    width: 90%;
+    margin: auto;
+}
+
+.HERO {
+    width: 500px;
+    height: 400px
+}
+
+.heroCallBtn {
+    display: none;
+}
+
+.heroContentDiv {
+    font-size: 30px;
+    width: 600px;
+}
+
+.heroContentDiv h1,
+.heroContentDiv h2,
+.heroContentDiv p {
+    margin: 5px;
+    color: white
+}
+
+.heroContentDiv h1 {
+    font-size: 1.4em;
+}
+
+.heroContentDiv h2 {
+    font-size: 0.9em;
+    color: var(--golden)
+}
+
+.heroContentDiv p {
+    font-size: 0.7em;
+    margin-bottom: 20px;
+}
+
+
+/* about */
+.about {
+    /* border: 2px solid black; */
+}
+
+.aboutContent {
+    padding: 50px 0px;
+}
+
+.ABOUT {
+    width: 600px;
+    height: 400px;
+}
+
+.aboutContentDiv {
+    width: 600px;
+    font-size: 22px;
+}
+
+.aboutContentDiv h1,
+.aboutContentDiv p {
+    margin: 5px;
+    width: fit-content
+}
+
+.aboutContentDiv h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.aboutContentDiv p {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+/* service */
+
+.service {
+    font-size: 22px;
+}
+
+.service h1 {
+    font-size: 1.8em;
+    width: fit-content
+}
+
+.serviceContent {
+    width: 80%;
+}
+
+/* feature */
+.feature {
+    font-size: 25px;
+}
+
+.feature h1 {
+    font-size: 1.8em;
+    width: fit-content
+}
+
+/* footer */
+.footer {
+    margin-top: 100px;
+}
+
+.contact {
+    padding: 10px 0px;
+    background-color: var(--purple-bg);
+}
+
+.socialMedia {
+    background: var(--dark-blue);
+}
+
+.rights {
+    color: rgb(190, 190, 190);
+    margin: 0px;
+    font-size: 15px;
+}
+
+@media screen and (max-width:600px) {
+    .heroCallBtn {
+        display: inline;
+    }
+}

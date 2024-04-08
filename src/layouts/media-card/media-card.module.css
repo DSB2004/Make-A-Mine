@@ -1,0 +1,54 @@
+.mediaCard {
+    position: relative;
+    height: 50px;
+    margin: 30px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.mediaCard svg {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    transition: all 50ms ease-in-out;
+}
+
+.titleBar {
+    max-width: 0px;
+    transition: all 100ms ease-in-out;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: absolute;
+    padding: 0px;
+    top: -15px;
+    left: 45px;
+    font-size: 12px;
+    color: white;
+}
+
+.slideIn {
+    z-index: 0;
+    transition: all 50ms ease-in-out;
+    position: absolute;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.mediaCard:hover .titleBar {
+    max-width: 75px;
+    width: fit-content;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.mediaCard:hover .slideIn {
+    height: 100%;
+}
+
+.mediaCard:hover svg {
+    color: white;
+}

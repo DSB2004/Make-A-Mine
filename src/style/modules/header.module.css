@@ -1,0 +1,94 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    z-index: 3;
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    transition: all 500ms ease-in-out;
+}
+
+.afterScroll {
+    box-shadow: var(--shadow);
+    color: black;
+    background-color: var(--off-white);
+}
+
+.heading {
+    font-size: 1em;
+    margin: 20px 0px;
+}
+
+.list {
+    font-size: 0.6em;
+    margin: 0px 5px;
+    font-weight: 600;
+}
+
+.menubtn {
+    display: none;
+}
+
+.dropmenu {
+    background-color: var(--off-white);
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0%;
+    height: 100vh;
+    width: 0px;
+    padding-left: 0px;
+    color: black;
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+    transition: all 500ms ease-in-out;
+
+}
+
+.openMenu {
+    width: 250px;
+    padding-left: 20px;
+}
+
+.dropheading {
+    overflow-x: auto;
+    font-size: 1.2em;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.droplist {
+    overflow-x: auto;
+    flex-shrink: 0;
+    font-size: 0.8em;
+    margin: 10px;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width:900px) {
+    .header {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .navbar {
+        display: none;
+    }
+
+    .heading {
+        margin-left: 10px;
+    }
+
+    .menubtn {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .menubtn,
+    .dropmenu {
+        display: flex;
+    }
+}

@@ -9,17 +9,17 @@ import Feature from '../components/home/feature';
 import Footer from "../components/home/footer"
 
 //static content
-import { header } from "../assets/static/home"
+import { header, hero, about, services, features, footer } from "../assets/static/home"
 
 const Home: FC = (): JSX.Element => {
     return (
-        <section>
+        <section >
             <Header content={header} />
-            <Hero />
-            <About />
-            <Service />
-            <Feature />
-            <Footer />
+            <Hero content={hero} />
+            <About content={about} />
+            <Service content={services} />
+            <Feature content={features} />
+            <Footer content={footer} />
         </section>
     );
 }

@@ -1,10 +1,13 @@
-import React from 'react';
-import Router from './router';
+
+import Router from '../routes';
+import Provider from '../provider';
 
 function App() {
   return (
     <>
-      <Router />
+      <Provider>
+        <Router />
+      </Provider>
     </>
   );
 }

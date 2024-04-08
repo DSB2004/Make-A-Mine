@@ -1,0 +1,7 @@
+.underline {
+    width: 60%;
+    margin: 5px 0px;
+    height: 4px;
+    border-radius: 5px;
+    background: var(--line-bg);
+}
