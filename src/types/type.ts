@@ -32,3 +32,4 @@ export interface socialMediaType {
     media: string,
     title: string
 }
+export interface testimonyType { name: string, dest: string, msg: string, img: string }

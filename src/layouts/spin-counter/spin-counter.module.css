@@ -1,0 +1,21 @@
+
+.spinCounter {
+    width: 25px;
+    height: 40px;
+    border-radius: 2px;
+    margin: 5px 2px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgb(199, 199, 199);
+}
+
+.numArray {
+    transition: all 1s ease-in-out;
+}
+
+
+.valueCon {
+    height: 100%;
+    width: 100%;
+}
+

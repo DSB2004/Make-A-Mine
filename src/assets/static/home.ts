@@ -2,6 +2,9 @@
 import HERO from "../image/HERO.png"
 import ABOUT from "../image/ABOUT.png"
 import FEATURE from "../image/FEATURE.png"
+import TEST1 from "../image/Amitoptic.png"
+import TEST2 from "../image/cadtabs.png"
+import TEST3 from "../image/Namanpath.png"
 
 // import icons for usage
 import { AiOutlineGlobal as Webdev } from "react-icons/ai";
@@ -22,7 +25,7 @@ import { BsInstagram as Instagram } from "react-icons/bs";
 import { BiLogoLinkedin as LinkedIn } from "react-icons/bi";
 
 // import types
-import { credType, serviceType, featureType, contactType, socialMediaType } from "../../types/type"
+import { credType, serviceType, featureType, contactType, socialMediaType, testimonyType } from "../../types/type"
 
 // type declaration
 type headerObj = { text: string, action: string, id: string, link?: string | undefined }
@@ -58,7 +61,7 @@ export const about: { header: string, para: string, summary: string, img: string
     para: "At Make A Mine, we specialize in delivering top-notch digital marketing solutions tailored to elevate your brand's online presence and drive exceptional results. With our comprehensive range of services, we empower businesses to stand out in the digital landscape and achieve their goals.",
     summary: " Let us be your strategic ally on your journey to digital success.",
     img: ABOUT,
-    cred: [{ head: "Happy Clients", info: "10+" }, { head: "Blogs Written", info: "300+" }, { head: "Strategy Call", info: "20+" },]
+    cred: [{ head: "Happy Clients", info: "010" }, { head: "Blogs Written", info: "300" }, { head: "Strategy Call", info: "020" },]
 }
 
 export const services: { header: string, service: serviceType[] } = {
@@ -88,6 +91,29 @@ export const features: { header: string, feature: featureType[], img: string } =
     header: "Our Features",
     img: FEATURE,
     feature: [{ head: "Idea Analysis", info: "Crafting success begins with a clear idea. We analyze your vision, goals, & audience, shaping innovative strategies that align with your objectives.", icon: Idea }, { head: "Designing", info: "Visual impact matters. Our designers create captivating visuals, blending creativity with user-centric design principles for seamless and immersive experiences.", icon: Brush }, { head: "Development", info: "From concept to reality. Our experts use cutting-edge tech to build robust solutions tailored to your needs, ensuring user-friendliness and innovation.", icon: AiOutlineCode }, { head: "Testing & Launching", info: "Quality assurance is key. Rigorous testing ensures flawless functionality across devices. With excellence assured, we guide you through a seamless launch, propelling your digital journey.", icon: FaBug }]
+}
+
+export const testimony: { header: string, testimony: testimonyType[] } = {
+    header: "Our Review", testimony: [
+        {
+            name: "Ankit Yadav ",
+            dest: "Founder , Amit Opticals",
+            msg: "Make A Mine has exceptional team and communication is very smooth. Best for ad campaigns . Kudos to the team !!",
+            img: TEST1,
+        },
+        {
+            name: "En Hemant Srivastava ",
+            dest: "Ceo Cadtabs",
+            msg: "I Strongly Recommend Make A Mine , Tried their Web Designing and ad campaign services and I must say , they are the best.",
+            img: TEST2,
+        },
+        {
+            name: "",
+            dest: "Namanpath",
+            msg: "The best Video Editing and Post designing services By Make A Mine",
+            img: TEST3,
+        }
+    ]
 }
 
 export const footer: { contactInfo: contactType[], socialMedia: socialMediaType[], rights: string, devSection: Object } = {

@@ -7,9 +7,9 @@ import About from '../components/home/about';
 import Service from '../components/home/services';
 import Feature from '../components/home/feature';
 import Footer from "../components/home/footer"
-
+import Testimony from '../components/home/testimony';
 //static content
-import { header, hero, about, services, features, footer } from "../assets/static/home"
+import { header, hero, about, services, features, footer, testimony } from "../assets/static/home"
 
 const Home: FC = (): JSX.Element => {
     return (
@@ -19,6 +19,7 @@ const Home: FC = (): JSX.Element => {
             <About content={about} />
             <Service content={services} />
             <Feature content={features} />
+            <Testimony content={testimony} />
             <Footer content={footer} />
         </section>
     );
