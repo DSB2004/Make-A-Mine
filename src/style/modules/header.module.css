@@ -15,9 +15,14 @@
     background-color: var(--off-white);
 }
 
-.heading {
-    font-size: 1em;
+.heading h1 {
     margin: 20px 0px;
+    font-size: 1em;
+}
+
+.heading svg {
+    height: 1.8em;
+    width: 1.8em;
 }
 
 .list {
@@ -73,7 +78,7 @@
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:700px) {
     .navbar {
         display: none;
     }

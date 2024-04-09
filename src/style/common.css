@@ -18,6 +18,12 @@
     flex-direction: column;
 }
 
+.flex-center-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
 .flex-left {
     display: flex;
     align-items: left;

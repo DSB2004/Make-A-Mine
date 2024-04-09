@@ -21,7 +21,7 @@ const About: FC<IPROPS> = ({ content }): JSX.Element => {
                     </h1>
                     <p>{para}</p>
                     <p>{summary}</p>
-                    <div className='flex-even'>
+                    <div className={`${style.cred} flex-even`}>
                         {
                             cred.map((element, index) => <CredCard head={element.head} info={element.info} key={index} />)
                         }

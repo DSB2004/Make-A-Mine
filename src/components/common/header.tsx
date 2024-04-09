@@ -4,6 +4,7 @@ import { useEvent } from '../../provider/handleEvent'
 //import layouts UI
 import Button from '../../layouts/button/button'
 import MenuToggle from '../../layouts/menu-btn/menu-btn'
+import Logo from '../../assets/svg/LOGO'
 
 // styling import 
 import style from "../../style/modules/header.module.css"
@@ -63,7 +64,12 @@ const Header: FC<IPROPS> = ({ content }): JSX.Element => {
     const { isScroll, isOpen, handleMenuClick, handleListClick, menuBtnRef } = useHeader()
     return (
         <header className={`flex-even ${style.header} ${isScroll ? style.afterScroll : ""}`}>
-            <h1 className={style.heading}>MakeAMine</h1>
+            <div className={`flex-center ${style.heading}`}>
+                <Logo />
+                <h1>
+                    MakeAMine
+                </h1>
+            </div>
             <nav className={`flex-center ${style.navbar}`}>
                 {list && list.map((element, index) => (
                     <NavList content={element} key={index} />

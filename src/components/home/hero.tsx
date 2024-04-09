@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import WAVE from "../../assets/image/WAVE.png"
+import WAVE1 from "../../assets/image/WAVE.png"
+import WAVE2 from "../../assets/image/WAVE-MOBILE.png"
 import style from "../../style/modules/home.module.css"
 
 import Button from '../../layouts/button/button'
@@ -34,7 +35,8 @@ const Hero: FC<IPROPS> = ({ content }): JSX.Element => {
                 </div>
                 <img src={img} alt="" className={style.HERO} />
             </div>
-            <img src={WAVE} alt="" className={style.heroWaveBg} />
+            <img src={WAVE1} alt="" className={style.heroWaveBg1} />
+            <img src={WAVE2} alt="" className={style.heroWaveBg2} />
         </article >
     )
 }

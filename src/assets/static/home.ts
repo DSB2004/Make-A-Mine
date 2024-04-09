@@ -108,7 +108,7 @@ export const testimony: { header: string, testimony: testimonyType[] } = {
             img: TEST2,
         },
         {
-            name: "",
+            name: "Person",
             dest: "Namanpath",
             msg: "The best Video Editing and Post designing services By Make A Mine",
             img: TEST3,

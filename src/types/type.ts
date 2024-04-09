@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 import { IconType } from "react-icons"
+
 export interface contextType {
     children: ReactNode
 }
@@ -32,4 +33,9 @@ export interface socialMediaType {
     media: string,
     title: string
 }
-export interface testimonyType { name: string, dest: string, msg: string, img: string }
+export interface testimonyType {
+    name: string,
+    dest: string,
+    msg: string,
+    img: string
+}

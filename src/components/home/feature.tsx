@@ -20,13 +20,13 @@ const Feature: FC<IPROPS> = ({ content }): JSX.Element => {
                 {header}
                 <Underline />
             </h1>
-            <div className={`flex-even`}>
-                <div>
+            <div className={`flex-even ${style.featureCardContainerParent}`}>
+                <div className={style.featureCardContainer}>
                     <FeatureCard head={feature[0].head} icon={feature[0].icon} info={feature[0].info} />
                     <FeatureCard head={feature[1].head} icon={feature[1].icon} info={feature[1].info} />
                 </div>
-                <img src={img} alt="" />
-                <div>
+                <img src={img} alt="" className={style.featureImg} />
+                <div className={style.featureCardContainer}>
                     <FeatureCard head={feature[2].head} icon={feature[2].icon} info={feature[2].info} />
                     <FeatureCard head={feature[3].head} icon={feature[3].icon} info={feature[3].info} />
                 </div>

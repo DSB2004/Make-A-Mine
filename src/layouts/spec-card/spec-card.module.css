@@ -29,11 +29,11 @@
 .CardSlide1,
 .CardSlide2 {
     transition: all 500ms ease-in-out;
-    height: 345px;
+    height: 100%;
 }
 
 .CardSlide1 h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: center;
 }
 
@@ -57,4 +57,19 @@
 .innerSpecCard:hover .CardSlide2 {
     transform: translateY(-100%);
 
+}
+
+@media screen and (max-width:700px) {
+    .specCard {
+        height: 300px;
+        width: 260px;
+        margin: 10px;
+    }
+
+    .innerSpecCard {
+        font-size: 20px;
+        height: 295px;
+        width: 255px;
+       
+    }
 }

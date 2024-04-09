@@ -21,9 +21,15 @@ const Footer: FC<IPROPS> = ({ content }): JSX.Element => {
             </div>
             <div className={`flex-center flex-column flex-wrap ${style.socialMedia}`}>
                 <div className={`flex-center flex-wrap`}>
-                    {
-                        socialMedia.map((element, index) => <MediaCard link={element.link} icon={element.icon} title={element.title} media={element.media} />)
-                    }
+                    <div className={'flex-even'}>
+                        <MediaCard link={socialMedia[0].link} icon={socialMedia[0].icon} title={socialMedia[0].title} media={socialMedia[0].media} />
+                        <MediaCard link={socialMedia[1].link} icon={socialMedia[1].icon} title={socialMedia[1].title} media={socialMedia[1].media} />
+
+                    </div>
+                    <div className={'flex-even'}>
+                        <MediaCard link={socialMedia[2].link} icon={socialMedia[2].icon} title={socialMedia[2].title} media={socialMedia[2].media} />
+                        <MediaCard link={socialMedia[3].link} icon={socialMedia[3].icon} title={socialMedia[3].title} media={socialMedia[3].media} />
+                    </div>
                 </div>
                 <h1 className={style.rights}>{rights}</h1>
             </div>
