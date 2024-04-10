@@ -12,6 +12,21 @@
     }
 }
 
+@keyframes carasoulUpward {
+    0% {
+        transform: translateY(0%);
+    }
+
+    85% {
+        transform: translateY(-75%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+
+}
+
 /* hero section */
 .hero {
     position: relative;
@@ -167,10 +182,19 @@
 }
 
 .testimonyCarasoul {
-    /* display: flex; */
-    /* overflow: scroll; */
-    width: 90%;
+    box-shadow: var(--shadow-1);
+    height: 450px;
+    overflow-y: hidden;
+    width: 600px;
+    border-radius: 20px;
 }
+
+.testimonyCarasoulInner {
+    width: fit-content;
+    margin: auto;
+    animation: carasoulUpward 20s linear infinite;
+}
+
 
 /* footer */
 .footer {
@@ -289,6 +313,14 @@
         width: fit-content
     }
 
+    /* testimony */
+
+
+    .testimony h1 {
+        font-size: 1.5em;
+        width: fit-content
+    }
+
 }
 
 @media screen and (max-width:800px) {
@@ -344,6 +376,13 @@
         text-align: center;
     }
 
+    /* testimony */
+    .testimonyCarasoul {
+        height: 400px;
+        overflow-y: hidden;
+        width: 90%;
+        border-radius: 20px;
+    }
 
 }
 
@@ -391,6 +430,12 @@
     }
 
     .feature h1 {
+        font-size: 1.3em;
+        width: fit-content
+    }
+
+    /* testimny */
+    .testimony h1 {
         font-size: 1.3em;
         width: fit-content
     }

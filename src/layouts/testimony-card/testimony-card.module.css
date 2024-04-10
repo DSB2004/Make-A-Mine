@@ -1,8 +1,8 @@
 .testimonyCard {
     height: 400px;
-    width: 350px;
+    width: 90%;
+    margin: 20px auto;
     border-radius: 20px;
-    box-shadow: var(--shadow-1);
     display: flex;
     flex-direction: column;
 }
@@ -14,7 +14,7 @@
 }
 
 .msg {
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     margin: 0px 15px;
     margin-bottom: auto;
@@ -32,7 +32,7 @@
 }
 
 .name {
-    font-size: 18px;
+    font-size: 25px;
     margin: 0px;
 }
 
@@ -49,8 +49,54 @@
 .clientOverHead {
     height: 2px;
     border-radius: 5px;
-    width: 300px;
+    width: 90%;
     margin: auto;
     margin-bottom: 20px;
     background-color: rgb(172, 172, 172);
+}
+
+
+@media screen and (max-width:800px) {
+    .comma {
+        font-size: 18px;
+    }
+
+    .msg {
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .testimonyCard {
+        height: 350px;
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+@media screen and (max-width:450px) {
+    @media screen and (max-width:800px) {
+        .comma {
+            font-size: 15px;
+        }
+
+        .msg {
+            font-size: 13px;
+        }
+
+        .name {
+            font-size: 18px;
+        }
+
+    }
 }

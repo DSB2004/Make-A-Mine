@@ -1,11 +1,14 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
+
 import WAVE1 from "../../assets/image/WAVE.png"
 import WAVE2 from "../../assets/image/WAVE-MOBILE.png"
+
 import style from "../../style/modules/home.module.css"
 
+import InView from '../../layouts/in-view/in-view'
 import Button from '../../layouts/button/button'
+
 import { useEvent } from '../../provider/handleEvent'
-import { useHeader } from '../../provider/handleHeaderEvent'
 
 interface IPROPS {
     content: {
@@ -13,15 +16,16 @@ interface IPROPS {
     }
 }
 
-
 const Hero: FC<IPROPS> = ({ content }): JSX.Element => {
     const { img, header, subheader, para, link } = content;
     const { handleScroll, handleExternalLink } = useEvent()
+    const [inView, changeView] = useState<boolean>(false)
 
     return (
-        <article className={style.hero}>
+        <article className={style.hero} id="hero">
+            <InView changeView={changeView} />
             <div className={`flex-even ${style.heroContent}`}>
-                <div className={`flex-left flex-column ${style.heroContentDiv}`}>
+                <div className={`flex-left flex-column ${inView ? "slide-left-in" : "slide-left-out"} ${style.heroContentDiv}`}>
                     <h2>{subheader}</h2>
                     <h1>{header}</h1>
                     <p>{para}</p>
@@ -33,7 +37,7 @@ const Hero: FC<IPROPS> = ({ content }): JSX.Element => {
                     </span>
                     <Button content={{ text: "Contact Us", id: "call btn", onClick: () => handleScroll("id") }} />
                 </div>
-                <img src={img} alt="" className={style.HERO} />
+                <img src={img} alt="" className={`${inView ? "slide-right-in" : "slide-right-out"} ${style.HERO}`} />
             </div>
             <img src={WAVE1} alt="" className={style.heroWaveBg1} />
             <img src={WAVE2} alt="" className={style.heroWaveBg2} />

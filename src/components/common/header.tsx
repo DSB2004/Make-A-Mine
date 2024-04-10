@@ -13,16 +13,16 @@ import { useHeader } from '../../provider/handleHeaderEvent'
 // type checking 
 type headerObjType = {
     text: string,
-    action: string,
     id: string
 }
+
 interface ListProp {
     content: {
         text: string,
-        action: string,
         id: string
     }
 }
+
 interface IPROPS {
     content: {
         list: headerObjType[], link?: string | undefined
@@ -33,10 +33,11 @@ interface IPROPS {
 //TSX Component
 
 const NavList: FC<ListProp> = ({ content }): JSX.Element => {
-    const { action, text, id } = content;
+    const { handleScroll } = useEvent()
+    const { text, id } = content;
     return (
         <>
-            <li className={style.list}>
+            <li className={style.list} onClick={() => handleScroll(id)}>
                 {text}
                 <div className={style.underline}></div>
             </li >
@@ -45,10 +46,11 @@ const NavList: FC<ListProp> = ({ content }): JSX.Element => {
 }
 
 const DropList: FC<ListProp> = ({ content }): JSX.Element => {
-    const { action, text, id } = content;
+    const { text, id } = content;
+    const { handleScroll } = useEvent()
     return (
         <>
-            <li className={style.droplist}>
+            <li className={style.droplist} onClick={() => handleScroll(id)}>
                 {text}
             </li>
         </>
@@ -60,11 +62,11 @@ const DropList: FC<ListProp> = ({ content }): JSX.Element => {
 
 const Header: FC<IPROPS> = ({ content }): JSX.Element => {
     const { list, link } = content;
-    const { handleExternalLink } = useEvent();
+    const { handleExternalLink, handleScroll } = useEvent();
     const { isScroll, isOpen, handleMenuClick, handleListClick, menuBtnRef } = useHeader()
     return (
         <header className={`flex-even ${style.header} ${isScroll ? style.afterScroll : ""}`}>
-            <div className={`flex-center ${style.heading}`}>
+            <div className={`flex-center ${style.heading}`} onClick={() => handleScroll("hero")}>
                 <Logo />
                 <h1>
                     MakeAMine

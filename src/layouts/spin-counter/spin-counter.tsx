@@ -2,7 +2,8 @@ import { FC, useEffect, useState } from 'react'
 import style from "./spin-counter.module.css"
 
 interface IPROPS {
-    value: string;
+    value: string,
+    toChange: boolean
 }
 
 const ValueCon: FC<IPROPS> = ({ value }): JSX.Element => {
@@ -15,7 +16,7 @@ const ValueCon: FC<IPROPS> = ({ value }): JSX.Element => {
     )
 }
 
-const SpinCounter: FC<IPROPS> = ({ value }): JSX.Element => {
+const SpinCounter: FC<IPROPS> = ({ value, toChange }): JSX.Element => {
     const numVal = Number(value)
     const [translate, setTranslate] = useState<string>('0%');
     useEffect(() => {
@@ -25,8 +26,8 @@ const SpinCounter: FC<IPROPS> = ({ value }): JSX.Element => {
     const numArray: string[] = ['9', '8', '7', '6', '5', '4', '3', '2', '1', '0']
     return (
         <div className={style.spinCounter}>
-            <div className={style.numArray} style={{ transform: `translateY(${translate})` }}>
-                {numArray.map((element, index) => <ValueCon value={element} key={index} />)}
+            <div className={style.numArray} style={toChange ? { transform: `translateY(${translate})` } : {}}>
+                {numArray.map((element, index) => <ValueCon toChange={toChange} value={element} key={index} />)}
             </div>
         </div>
     )

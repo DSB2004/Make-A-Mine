@@ -1,7 +1,8 @@
-
 .spinCounter {
-    width: 25px;
-    height: 40px;
+    width: 15px;
+    height: 25px;
+    font-size: 1em;
+    border: 2px solid black;
     border-radius: 2px;
     margin: 5px 2px;
     overflow: hidden;
@@ -15,7 +16,6 @@
 
 
 .valueCon {
-    height: 100%;
-    width: 100%;
+    height: 25px;
+    width: 15px;
 }
-

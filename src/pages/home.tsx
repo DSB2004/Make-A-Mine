@@ -19,7 +19,7 @@ const Home: FC = (): JSX.Element => {
             <About content={about} />
             <Service content={services} />
             <Feature content={features} />
-            {/* <Testimony content={testimony} /> */}
+            <Testimony content={testimony} />
             <Footer content={footer} />
         </section>
     );

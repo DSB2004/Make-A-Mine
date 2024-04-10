@@ -28,7 +28,7 @@ import { BiLogoLinkedin as LinkedIn } from "react-icons/bi";
 import { credType, serviceType, featureType, contactType, socialMediaType, testimonyType } from "../../types/type"
 
 // type declaration
-type headerObj = { text: string, action: string, id: string, link?: string | undefined }
+type headerObj = { text: string, id: string }
 
 //media links
 const formLink = "https://docs.google.com/forms/d/e/1FAIpQLSeEGrojA-oAUOVpOrugBQaHmHes4rVYsOYnlrW9EkLHm34BtA/viewform"
@@ -41,10 +41,10 @@ const youtube = "https://www.youtube.com/@MakeAMine"
 
 
 export const header: { list: headerObj[], link?: string | undefined } = {
-    list: [{ text: "About Us", action: "scroll", id: "about" },
-    { text: "Features", action: "scroll", id: "feature" },
-    { text: "Service", action: "scroll", id: "service" },
-    { text: "Review", action: "scroll", id: "review" }],
+    list: [{ text: "About Us", id: "about" },
+    { text: "Service", id: "service" },
+    { text: "Features", id: "feature" },
+    { text: "Review", id: "review" }],
     link: formLink
 };
 

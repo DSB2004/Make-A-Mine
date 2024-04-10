@@ -1,8 +1,10 @@
-
+import { FC, useState, useEffect } from "react"
 import Router from '../routes';
+
 import Provider from '../provider';
 
-function App() {
+const App: FC = (): JSX.Element => {
+
   return (
     <>
       <Provider>
