@@ -116,11 +116,11 @@ export const testimony: { header: string, testimony: testimonyType[] } = {
     ]
 }
 
-export const footer: { contactInfo: contactType[], socialMedia: socialMediaType[], rights: string, devSection: Object } = {
+export const footer: { contactInfo: contactType[], socialMedia: socialMediaType[], rights: string, devSection: { head: string, github: string, linkedin: string } } = {
     contactInfo: [{ icon: Mail, info: "info@makeamine.com" }, { icon: Mail, info: "varun@makeamine.com" }, { icon: Phone, info: "8766247447" }, { info: "Delhi India", icon: Location }],
     socialMedia: [{ icon: Facebook, link: facebook, media: "fb", title: "Facebook" }, { icon: Instagram, media: 'ig', link: instagram, title: "Instagram" }, { icon: Youtube, media: "yt", title: "Youtube", link: youtube }, { icon: LinkedIn, link: linkedin, title: "LinkedIn", media: "ln" }],
     rights: "© 2022 Make A Mine. All Right Reserved",
-    devSection: {}
+    devSection: { head: "By Damanjeet Singh", github: "https://github.com/DSB2004", linkedin: "https://www.linkedin.com/in/damanjeet-singh-8b879b295" }
 
 }
 

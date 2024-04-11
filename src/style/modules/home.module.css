@@ -212,8 +212,30 @@
 
 .rights {
     color: rgb(190, 190, 190);
-    margin: 0px;
+    margin: 5px;
     font-size: 15px;
+}
+
+
+.devSection {
+    margin: 10px;
+}
+
+.devSection h3 {
+    margin: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+}
+
+.devSectionLink {
+    width: 150px;
+    font-size: 13px;
+}
+
+.devSectionLink a {
+    color: white;
+    text-decoration: none;
 }
 
 @media screen and (max-width:1200px) {

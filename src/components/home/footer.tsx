@@ -1,19 +1,20 @@
 import React, { FC, useState } from 'react'
 import style from "../../style/modules/home.module.css"
-
-
 import MediaCard from '../../layouts/media-card/media-card'
 import ContactCard from '../../layouts/contact-card/contact-card'
 import InView from '../../layouts/in-view/in-view'
 
 import { contactType, socialMediaType } from '../../types/type'
+import { useEvent } from '../../provider/handleEvent'
+import { Link } from 'react-router-dom'
 interface IPROPS {
-    content: { contactInfo: contactType[], socialMedia: socialMediaType[], rights: string, devSection: Object }
+    content: { contactInfo: contactType[], socialMedia: socialMediaType[], rights: string, devSection: { head: string, github: string, linkedin: string } }
 }
 
 const Footer: FC<IPROPS> = ({ content }): JSX.Element => {
     const { contactInfo, socialMedia, rights, devSection } = content
     const [inview, changeView] = useState<boolean>(false);
+    const { handleExternalLink } = useEvent()
     return (
         <footer className={style.footer} id="footer">
             <InView changeView={changeView} />
@@ -37,6 +38,13 @@ const Footer: FC<IPROPS> = ({ content }): JSX.Element => {
                     </div>
                 </div>
                 <h1 className={style.rights}>{rights}</h1>
+                <div className={`flex-center flex-column ${style.devSection}`}>
+                    <h3>{devSection.head}</h3>
+                    <span className={`flex-even ${style.devSectionLink}`}>
+                        <Link to={devSection.github} target='__blank'>Github</Link>
+                        <Link to={devSection.linkedin} target='__blank'> LinkedIn</Link>
+                    </span>
+                </div>
             </div>
         </footer >
     )

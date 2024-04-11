@@ -6,7 +6,7 @@ interface IPROPS {
     isOpen: boolean,
     isScroll: boolean,
     menuBtnRef: RefObject<HTMLInputElement> | null;
-    handleListClick: (id: string) => void,
+    handleMenuClose: () => void,
     handleMenuClick: () => void
 }
 
@@ -48,21 +48,13 @@ const HeaderProvider: FC<contextType> = ({ children }): JSX.Element => {
         }
     }
 
-    const handleListClick = (id: string): void => {
-        if (menuBtnRef.current !== null) {
-            menuBtnRef.current.checked = false;
-            toggleMenu(menuBtnRef.current.checked);
-            console.log("Clicked list: ", id)
-        }
-    }
-
     useEffect(() => {
         window.addEventListener('scroll', handleScrollEvent)
         return (): void => { window.removeEventListener('scroll', handleScrollEvent) }
     }, [])
 
     return (
-        <HeaderContext.Provider value={{ isScroll, isOpen, menuBtnRef, handleMenuClick, handleListClick }}>
+        <HeaderContext.Provider value={{ isScroll, isOpen, menuBtnRef, handleMenuClick, handleMenuClose }}>
             {children}
         </HeaderContext.Provider>
     );

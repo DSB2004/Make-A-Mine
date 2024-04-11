@@ -1,0 +1,68 @@
+:root {
+    --error-page-head: 30px;
+    --error-page-para: 20px;
+    --error-page-list: 18px;
+}
+
+.notFound {
+    height: 100vh;
+}
+
+.errorpagehead {
+    font-size: var(--error-page-head);
+    text-align: center;
+}
+
+.errorpagepara {
+    color: black;
+    width: 60%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: var(--error-page-para);
+}
+
+.errorpagelist {
+    list-style: circle;
+    font-size: var(--error-page-list);
+}
+
+
+@media screen and (max-width:1000px) {
+    :root {
+        --error-page-head: 30px;
+        --error-page-para: 20px;
+        --error-page-list: 18px;
+    }
+
+    .errorpagepara {
+        width: 80%;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    :root {
+        --error-page-head: 25px;
+        --error-page-para: 18px;
+        --error-page-list: 15px;
+    }
+
+    .errorpagepara {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:300px) {
+    :root {
+        --error-page-head: 22px;
+        --error-page-para: 15px;
+        --error-page-list: 12px;
+    }
+
+    .errorpagepara {
+        width: 80%;
+    }
+
+}

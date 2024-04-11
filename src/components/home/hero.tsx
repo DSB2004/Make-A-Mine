@@ -35,7 +35,7 @@ const Hero: FC<IPROPS> = ({ content }): JSX.Element => {
                             onClick: (): void => { handleExternalLink(link) }
                         }} key="free-call-btn" />
                     </span>
-                    <Button content={{ text: "Contact Us", id: "call btn", onClick: () => handleScroll("id") }} />
+                    <Button content={{ text: "Contact Us", id: "call btn", onClick: () => handleScroll("footer") }} />
                 </div>
                 <img src={img} alt="" className={`${inView ? "slide-right-in" : "slide-right-out"} ${style.HERO}`} />
             </div>
