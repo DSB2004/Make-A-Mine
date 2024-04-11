@@ -1,7 +1,7 @@
 
 # Make A Mine
 
-Make A Mine is a digital platform offering high-quality services such as marketing, SEO, and deployment with a proven track record of success.
+Make A Mine is a digital marketing platform offering high-quality services such as SEO, deployment etc with a proven track record of success.
 
 
 ## Tech Stack
